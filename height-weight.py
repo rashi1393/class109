@@ -2,6 +2,7 @@ import pandas as pd
 import statistics
 import csv
 df = pd.read_csv("height-weight.csv")
+
 height_list = df["Height(Inches)"].to_list()
 weight_list = df["Weight(Pounds)"].to_list()
 #Mean for height and Weight
@@ -16,6 +17,7 @@ weight_mode = statistics.mode(weight_list)
 #Printing mean, median and mode to validate
 print("Mean, Median and Mode of height is {}, {} and {} respectively".format(height_mean, height_median, height_mode))
 print("Mean, Median and Mode of weight is {}, {} and {} respectively".format(weight_mean, weight_median, weight_mode))
+
 #Standard deviation for height and weight
 height_std_deviation = statistics.stdev(height_list)
 weight_std_deviation = statistics.stdev(weight_list)
